@@ -1,0 +1,51 @@
+id,lang,label,text
+1,de,requirement,Die Prüfkörper müssen vor der Prüfung mindestens 24 h bei (23 ± 2) °C gelagert werden.
+2,de,requirement,Der Hersteller muss die Ergebnisse der Erstprüfung dokumentieren und mindestens zehn Jahre aufbewahren.
+3,de,requirement,Die Schweißnähte sind vor dem Beschichten einer Sichtprüfung zu unterziehen.
+4,de,requirement,Die Oberflächentemperatur der Abdeckung darf 60 °C nicht überschreiten.
+5,de,requirement,Jedes Bauteil ist dauerhaft und gut lesbar mit dem Herstellerzeichen zu kennzeichnen.
+6,de,recommendation,Die Messung sollte an mindestens drei verschiedenen Stellen des Bauteils durchgeführt werden.
+7,de,recommendation,"Es wird empfohlen, die Kalibrierung des Messgerätes jährlich zu wiederholen."
+8,de,recommendation,"Rohrleitungen sollten so verlegt werden, dass sie für Wartungsarbeiten zugänglich bleiben."
+9,de,recommendation,Die Proben sollten nicht länger als 48 h vor der Analyse gelagert werden.
+10,de,recommendation,Für Außenanwendungen sollte vorzugsweise nichtrostender Stahl verwendet werden.
+11,de,permission,Abweichend davon darf die Prüfung auch bei Raumtemperatur durchgeführt werden.
+12,de,permission,"Die Kennzeichnung darf auf der Verpackung angebracht werden, wenn das Produkt zu klein ist."
+13,de,permission,"Es ist zulässig, anstelle des Referenzverfahrens ein gleichwertiges Messverfahren anzuwenden."
+14,de,permission,Bei Wanddicken unter 3 mm braucht die Kerbschlagprüfung nicht durchgeführt zu werden.
+15,de,permission,Der Prüfbericht darf in elektronischer Form bereitgestellt werden.
+16,de,possibility,Bei Temperaturen unter 5 °C kann sich die Aushärtezeit des Klebstoffs deutlich verlängern.
+17,de,possibility,Feuchtigkeit im Dämmstoff kann zu einer Verringerung des Wärmedurchlasswiderstandes führen.
+18,de,possibility,Das Gerät kann sowohl im Netzbetrieb als auch im Batteriebetrieb eingesetzt werden.
+19,de,possibility,Durch Schwingungen können sich Schraubverbindungen im Laufe der Zeit lösen.
+20,de,possibility,Mit diesem Verfahren lassen sich Schichtdicken bis 500 µm bestimmen.
+21,de,statement,Diese Norm legt Anforderungen an Befestigungselemente aus Stahl fest.
+22,de,statement,Die Zugfestigkeit ist der Quotient aus der Höchstkraft und dem Anfangsquerschnitt der Probe.
+23,de,statement,Anhang B ist informativ.
+24,de,statement,Das Prüfgerät besteht aus einem Belastungsrahmen und einer Kraftmesseinrichtung.
+25,de,statement,Tabelle 3 enthält die Grenzabmaße für die Nennmaßbereiche bis 400 mm.
+26,en,requirement,The test specimens shall be conditioned for at least 24 h at (23 ± 2) °C before testing.
+27,en,requirement,The manufacturer shall document the results of the initial type test and retain them for at least ten years.
+28,en,requirement,Welds are to be visually inspected before coating.
+29,en,requirement,The surface temperature of the cover shall not exceed 60 °C.
+30,en,requirement,Each component shall be permanently and legibly marked with the manufacturer's mark.
+31,en,recommendation,The measurement should be carried out at a minimum of three different locations on the component.
+32,en,recommendation,It is recommended that the calibration of the measuring instrument be repeated annually.
+33,en,recommendation,Pipes should be installed in such a way that they remain accessible for maintenance.
+34,en,recommendation,Samples should not be stored for longer than 48 h before analysis.
+35,en,recommendation,"For outdoor applications, stainless steel should preferably be used."
+36,en,permission,"By way of derogation, the test may also be carried out at room temperature."
+37,en,permission,The marking may be applied to the packaging if the product is too small.
+38,en,permission,It is permissible to use an equivalent measurement method instead of the reference method.
+39,en,permission,"For wall thicknesses below 3 mm, the impact test need not be carried out."
+40,en,permission,The test report may be provided in electronic form.
+41,en,possibility,"At temperatures below 5 °C, the curing time of the adhesive can increase considerably."
+42,en,possibility,Moisture in the insulation material can lead to a reduction in thermal resistance.
+43,en,possibility,The device can be operated either from the mains or from a battery.
+44,en,possibility,Vibration can cause bolted connections to loosen over time.
+45,en,possibility,This method is capable of determining coating thicknesses of up to 500 µm.
+46,en,statement,This standard specifies requirements for steel fasteners.
+47,en,statement,Tensile strength is the quotient of the maximum force and the original cross-sectional area of the specimen.
+48,en,statement,Annex B is informative.
+49,en,statement,The test apparatus consists of a loading frame and a force-measuring device.
+50,en,statement,Table 3 gives the limit deviations for nominal size ranges up to 400 mm.

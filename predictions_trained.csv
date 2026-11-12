@@ -1,0 +1,51 @@
+id,lang,label,text,tfidf_pred,tfidf_p_requirement,tfidf_p_recommendation,tfidf_p_permission,tfidf_p_possibility,tfidf_p_statement,e5_pred,e5_p_requirement,e5_p_recommendation,e5_p_permission,e5_p_possibility,e5_p_statement
+1,de,requirement,Die Prüfkörper müssen vor der Prüfung mindestens 24 h bei (23 ± 2) °C gelagert werden.,requirement,0.4319,0.2462,0.2035,0.0428,0.0756,recommendation,0.179,0.4751,0.1005,0.0879,0.1575
+2,de,requirement,Der Hersteller muss die Ergebnisse der Erstprüfung dokumentieren und mindestens zehn Jahre aufbewahren.,requirement,0.4239,0.1052,0.2749,0.0348,0.1613,permission,0.3056,0.3064,0.3386,0.0195,0.0298
+3,de,requirement,Die Schweißnähte sind vor dem Beschichten einer Sichtprüfung zu unterziehen.,requirement,0.3674,0.2536,0.1455,0.1471,0.0863,recommendation,0.194,0.284,0.2585,0.0604,0.2031
+4,de,requirement,Die Oberflächentemperatur der Abdeckung darf 60 °C nicht überschreiten.,requirement,0.3398,0.1697,0.2724,0.0805,0.1376,requirement,0.3006,0.2705,0.0816,0.2042,0.1431
+5,de,requirement,Jedes Bauteil ist dauerhaft und gut lesbar mit dem Herstellerzeichen zu kennzeichnen.,requirement,0.3119,0.0849,0.2232,0.2412,0.1388,requirement,0.5317,0.1248,0.0706,0.061,0.2119
+6,de,recommendation,Die Messung sollte an mindestens drei verschiedenen Stellen des Bauteils durchgeführt werden.,recommendation,0.0221,0.6389,0.2364,0.0455,0.0571,recommendation,0.0991,0.5476,0.2474,0.038,0.0679
+7,de,recommendation,"Es wird empfohlen, die Kalibrierung des Messgerätes jährlich zu wiederholen.",recommendation,0.0676,0.7688,0.0569,0.0597,0.047,recommendation,0.0535,0.7086,0.1412,0.0422,0.0544
+8,de,recommendation,"Rohrleitungen sollten so verlegt werden, dass sie für Wartungsarbeiten zugänglich bleiben.",recommendation,0.0484,0.7633,0.1008,0.0449,0.0425,recommendation,0.1075,0.7567,0.1036,0.0103,0.0219
+9,de,recommendation,Die Proben sollten nicht länger als 48 h vor der Analyse gelagert werden.,recommendation,0.1258,0.7952,0.0561,0.0087,0.0143,recommendation,0.1703,0.6398,0.0952,0.0498,0.0449
+10,de,recommendation,Für Außenanwendungen sollte vorzugsweise nichtrostender Stahl verwendet werden.,recommendation,0.016,0.9069,0.05,0.0102,0.0168,recommendation,0.235,0.571,0.1046,0.0389,0.0506
+11,de,permission,Abweichend davon darf die Prüfung auch bei Raumtemperatur durchgeführt werden.,permission,0.0097,0.0613,0.8854,0.0226,0.0209,permission,0.0541,0.1691,0.6829,0.0479,0.0461
+12,de,permission,"Die Kennzeichnung darf auf der Verpackung angebracht werden, wenn das Produkt zu klein ist.",permission,0.0123,0.0076,0.9184,0.0134,0.0482,permission,0.0486,0.0952,0.8049,0.0357,0.0156
+13,de,permission,"Es ist zulässig, anstelle des Referenzverfahrens ein gleichwertiges Messverfahren anzuwenden.",permission,0.1065,0.053,0.6135,0.1028,0.1243,permission,0.0511,0.3564,0.4819,0.0336,0.0768
+14,de,permission,Bei Wanddicken unter 3 mm braucht die Kerbschlagprüfung nicht durchgeführt zu werden.,permission,0.0318,0.0589,0.8596,0.0352,0.0145,requirement,0.5099,0.1506,0.2045,0.1015,0.0335
+15,de,permission,Der Prüfbericht darf in elektronischer Form bereitgestellt werden.,permission,0.1162,0.0719,0.6818,0.0416,0.0886,permission,0.0716,0.1835,0.6808,0.0174,0.0467
+16,de,possibility,Bei Temperaturen unter 5 °C kann sich die Aushärtezeit des Klebstoffs deutlich verlängern.,possibility,0.0196,0.0659,0.0085,0.8512,0.0547,possibility,0.0339,0.207,0.0474,0.5424,0.1693
+17,de,possibility,Feuchtigkeit im Dämmstoff kann zu einer Verringerung des Wärmedurchlasswiderstandes führen.,possibility,0.0261,0.0109,0.0241,0.8972,0.0417,possibility,0.0138,0.0123,0.0112,0.9242,0.0384
+18,de,possibility,Das Gerät kann sowohl im Netzbetrieb als auch im Batteriebetrieb eingesetzt werden.,possibility,0.0348,0.0984,0.2889,0.5185,0.0593,possibility,0.0586,0.0517,0.1933,0.5593,0.1371
+19,de,possibility,Durch Schwingungen können sich Schraubverbindungen im Laufe der Zeit lösen.,possibility,0.0298,0.0122,0.0194,0.9218,0.0169,possibility,0.0128,0.0066,0.0052,0.9573,0.0181
+20,de,possibility,Mit diesem Verfahren lassen sich Schichtdicken bis 500 µm bestimmen.,possibility,0.0317,0.0341,0.019,0.858,0.0573,possibility,0.0129,0.1345,0.0152,0.6822,0.1552
+21,de,statement,Diese Norm legt Anforderungen an Befestigungselemente aus Stahl fest.,statement,0.0406,0.0273,0.0787,0.0692,0.7842,statement,0.3171,0.0378,0.0209,0.0202,0.604
+22,de,statement,Die Zugfestigkeit ist der Quotient aus der Höchstkraft und dem Anfangsquerschnitt der Probe.,statement,0.244,0.0599,0.0704,0.04,0.5857,statement,0.1286,0.0142,0.0159,0.0552,0.7861
+23,de,statement,Anhang B ist informativ.,statement,0.1738,0.051,0.1275,0.0708,0.5768,statement,0.1952,0.0143,0.0591,0.0153,0.7161
+24,de,statement,Das Prüfgerät besteht aus einem Belastungsrahmen und einer Kraftmesseinrichtung.,statement,0.1329,0.0535,0.1007,0.2224,0.4906,statement,0.1425,0.0113,0.0357,0.064,0.7466
+25,de,statement,Tabelle 3 enthält die Grenzabmaße für die Nennmaßbereiche bis 400 mm.,statement,0.0715,0.0575,0.0812,0.0465,0.7432,statement,0.234,0.071,0.0946,0.0509,0.5495
+26,en,requirement,The test specimens shall be conditioned for at least 24 h at (23 ± 2) °C before testing.,requirement,0.8591,0.0624,0.0258,0.0114,0.0413,recommendation,0.2743,0.3856,0.1311,0.0469,0.162
+27,en,requirement,The manufacturer shall document the results of the initial type test and retain them for at least ten years.,requirement,0.3714,0.1966,0.1035,0.0418,0.2867,recommendation,0.1507,0.4284,0.2994,0.0186,0.1029
+28,en,requirement,Welds are to be visually inspected before coating.,requirement,0.6059,0.1906,0.0812,0.0441,0.0781,recommendation,0.22,0.4846,0.1659,0.054,0.0755
+29,en,requirement,The surface temperature of the cover shall not exceed 60 °C.,requirement,0.5699,0.0646,0.066,0.0897,0.2098,recommendation,0.2136,0.4494,0.1254,0.0917,0.1199
+30,en,requirement,Each component shall be permanently and legibly marked with the manufacturer's mark.,requirement,0.8517,0.0263,0.0751,0.0202,0.0267,requirement,0.6136,0.0817,0.2592,0.0065,0.039
+31,en,recommendation,The measurement should be carried out at a minimum of three different locations on the component.,recommendation,0.0198,0.7823,0.0999,0.048,0.0501,recommendation,0.0521,0.5168,0.3434,0.0209,0.0668
+32,en,recommendation,It is recommended that the calibration of the measuring instrument be repeated annually.,recommendation,0.0733,0.6549,0.0851,0.0758,0.111,recommendation,0.0483,0.4986,0.155,0.0252,0.2728
+33,en,recommendation,Pipes should be installed in such a way that they remain accessible for maintenance.,recommendation,0.0514,0.838,0.0726,0.0155,0.0226,recommendation,0.1202,0.7606,0.1053,0.0094,0.0046
+34,en,recommendation,Samples should not be stored for longer than 48 h before analysis.,recommendation,0.1043,0.8552,0.0271,0.0059,0.0075,recommendation,0.2218,0.5388,0.1585,0.0495,0.0313
+35,en,recommendation,"For outdoor applications, stainless steel should preferably be used.",recommendation,0.0435,0.8111,0.0956,0.0146,0.0352,recommendation,0.0599,0.806,0.0925,0.032,0.0095
+36,en,permission,"By way of derogation, the test may also be carried out at room temperature.",permission,0.0236,0.125,0.7322,0.051,0.0682,permission,0.0262,0.0904,0.7194,0.123,0.041
+37,en,permission,The marking may be applied to the packaging if the product is too small.,permission,0.0152,0.0088,0.951,0.0085,0.0165,permission,0.0143,0.1231,0.808,0.0448,0.01
+38,en,permission,It is permissible to use an equivalent measurement method instead of the reference method.,permission,0.0681,0.0825,0.5047,0.1481,0.1967,permission,0.0425,0.4247,0.474,0.0185,0.0403
+39,en,permission,"For wall thicknesses below 3 mm, the impact test need not be carried out.",permission,0.0814,0.1492,0.6985,0.0311,0.0397,requirement,0.5031,0.2219,0.1967,0.0545,0.0238
+40,en,permission,The test report may be provided in electronic form.,permission,0.0154,0.0076,0.948,0.0106,0.0184,permission,0.0166,0.0552,0.8305,0.0368,0.0609
+41,en,possibility,"At temperatures below 5 °C, the curing time of the adhesive can increase considerably.",possibility,0.0293,0.0716,0.0127,0.7417,0.1447,possibility,0.015,0.2226,0.0276,0.639,0.0958
+42,en,possibility,Moisture in the insulation material can lead to a reduction in thermal resistance.,possibility,0.0294,0.0292,0.021,0.7303,0.1902,possibility,0.0283,0.0401,0.0375,0.8197,0.0744
+43,en,possibility,The device can be operated either from the mains or from a battery.,possibility,0.0789,0.0476,0.2491,0.5816,0.0428,possibility,0.0684,0.0149,0.4381,0.4562,0.0224
+44,en,possibility,Vibration can cause bolted connections to loosen over time.,possibility,0.0439,0.0262,0.0386,0.8676,0.0236,possibility,0.0118,0.0155,0.0143,0.9405,0.0178
+45,en,possibility,This method is capable of determining coating thicknesses of up to 500 µm.,possibility,0.0155,0.02,0.0114,0.8748,0.0782,possibility,0.0111,0.0885,0.0103,0.7317,0.1584
+46,en,statement,This standard specifies requirements for steel fasteners.,statement,0.0499,0.0297,0.0376,0.0208,0.862,statement,0.1013,0.1653,0.0174,0.0064,0.7096
+47,en,statement,Tensile strength is the quotient of the maximum force and the original cross-sectional area of the specimen.,statement,0.1427,0.0371,0.0788,0.0822,0.6593,statement,0.0941,0.0169,0.0141,0.0979,0.7771
+48,en,statement,Annex B is informative.,statement,0.0932,0.0667,0.0834,0.0928,0.6639,statement,0.2204,0.0442,0.027,0.0527,0.6558
+49,en,statement,The test apparatus consists of a loading frame and a force-measuring device.,statement,0.0915,0.022,0.0279,0.0429,0.8158,statement,0.0978,0.0085,0.0196,0.0489,0.8252
+50,en,statement,Table 3 gives the limit deviations for nominal size ranges up to 400 mm.,statement,0.1052,0.0861,0.2961,0.1673,0.3452,statement,0.1255,0.0352,0.0953,0.0527,0.6913

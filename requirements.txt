@@ -1,0 +1,12 @@
+# Python 3.10+ (developed on 3.11)
+torch==2.8.0
+transformers==5.22.2
+numpy==2.2.6
+pandas==2.3.3
+scikit-learn==1.7.1
+joblib==1.5.1
+sentencepiece==0.2.1
+# classify.py, compare.py
+laya==0.4.31
+# compare.py only
+gliclass==0.1.22

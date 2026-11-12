@@ -21,7 +21,7 @@ Tested on the 50 sentences in `provisions.csv` (25 German, 25 English).
 | TF-IDF n-grams + logistic regression (trained) | 100% | 1.2 |
 | multilingual-e5-small embeddings + logistic regression (trained) | 82% | 17 |
 | Laya zero-shot, best question formulation | 74% | 95–500 |
-| Other zero-shot classifiers (GLiClass, NLI models) | 36–72% | 135–12,000 |
+| GLiClass zero-shot (gliclass-x-base) | 36–68% | 135–175 |
 
 **How to read these numbers**
 
@@ -29,6 +29,7 @@ Tested on the 50 sentences in `provisions.csv` (25 German, 25 English).
 - The TF-IDF model has essentially learned the verbal forms and fails on phrasings it has not seen ("is prohibited", "es ist darauf zu achten").
 - The Laya question formulation (74%) was picked as the best of seven on the same 50 sentences; without that selection it scores 48–66%.
 - Zero-shot models depend heavily on how the labels are worded: the spread for a single model reaches 30 points.
+- NLI-based zero-shot models (bge-m3-zeroshot-v2.0, mDeBERTa-v3-base-xnli, deberta-v3-large-zeroshot-v2.0) were tried and dropped: 36–72% accuracy at 2.5–12 s per sentence, because they need one forward pass per label. gliclass-large-v3.0 was dropped too (English only, 16–44%).
 - TypeSafe Jev and Microsoft Decision-1 were not tested: both are closed, paid APIs.
 
 ## Files
@@ -38,7 +39,7 @@ Tested on the 50 sentences in `provisions.csv` (25 German, 25 English).
 | `provisions.csv` | 50 test sentences with their types |
 | `train.csv` | 300 training sentences (30 per type and language), no overlap with the test set |
 | `classify.py` | Laya zero-shot run → `report.html`, `predictions.csv` |
-| `compare.py` | accuracy and speed comparison of zero-shot classifiers → `comparison.csv` |
+| `compare.py` | accuracy and speed comparison of the fast zero-shot classifiers (Laya, GLiClass) → `comparison.csv` |
 | `train.py` | trains two fast classifiers → `report_trained.html`, `predictions_trained.csv`, `model_*.joblib` |
 | `report.html`, `report_trained.html` | reports with the probability of each type for each sentence |
 
@@ -58,10 +59,10 @@ python -m venv .venv
 ```bash
 .venv\Scripts\python train.py      # train and test, takes seconds
 .venv\Scripts\python classify.py   # Laya zero-shot
-.venv\Scripts\python compare.py    # zero-shot model comparison, slow on CPU
+.venv\Scripts\python compare.py    # Laya vs GLiClass zero-shot
 ```
 
-On first run the models are downloaded from Hugging Face: about 470 MB for `train.py`, about 1.5 GB for `classify.py`, about 6 GB for `compare.py`.
+On first run the models are downloaded from Hugging Face: about 470 MB for `train.py`, about 1.5 GB for `classify.py`, about 2.6 GB for `compare.py`.
 
 `classify.py` accepts custom paths: `python classify.py input.csv report.html`. The input CSV has the columns `id`, `lang` (`de` or `en`), `label`, `text`.
 

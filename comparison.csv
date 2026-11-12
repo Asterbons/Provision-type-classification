@@ -3,19 +3,7 @@ laya (en + multilingual),names,en,0.64,396.82330399999046,1.0,0.8,0.6,0.8,0.0
 laya (en + multilingual),names,de,0.64,94.0165640000123,0.8,0.2,0.8,1.0,0.4
 laya (en + multilingual),desc,en,0.64,504.45647600001394,1.0,0.8,0.4,0.8,0.2
 laya (en + multilingual),desc,de,0.6,147.33815600000526,0.4,0.0,1.0,1.0,0.6
-bge-m3-zeroshot-v2.0,names,en,0.52,2496.0631080000167,1.0,0.4,0.0,1.0,0.2
-bge-m3-zeroshot-v2.0,names,de,0.48,2951.551880000007,0.8,0.6,0.0,0.6,0.4
-bge-m3-zeroshot-v2.0,desc,en,0.64,3188.2658879999876,1.0,0.8,0.6,0.6,0.2
-bge-m3-zeroshot-v2.0,desc,de,0.56,3712.353063999981,0.6,0.6,1.0,0.6,0.0
-mDeBERTa-v3-base-xnli,names,en,0.52,3774.1168959999777,0.6,0.6,0.2,0.6,0.6
-mDeBERTa-v3-base-xnli,names,de,0.56,4130.858292000012,0.4,1.0,0.2,0.4,0.8
-mDeBERTa-v3-base-xnli,desc,en,0.36,4214.956631999994,0.0,0.0,0.8,1.0,0.0
-mDeBERTa-v3-base-xnli,desc,de,0.36,4713.678975999974,0.4,0.0,1.0,0.4,0.0
-deberta-v3-large-zeroshot-v2.0,names,en,0.6,10813.140084000006,1.0,0.4,0.6,0.2,0.8
-deberta-v3-large-zeroshot-v2.0,desc,en,0.72,12118.732195999983,0.8,1.0,0.8,0.4,0.6
 gliclass-x-base,names,en,0.6,136.01645599999756,0.8,0.6,0.4,1.0,0.2
 gliclass-x-base,names,de,0.68,143.01137200000085,0.6,0.6,1.0,1.0,0.2
 gliclass-x-base,desc,en,0.36,170.44030400000338,0.0,0.6,0.2,1.0,0.0
 gliclass-x-base,desc,de,0.36,173.81659200000286,0.2,0.6,0.0,1.0,0.0
-gliclass-large-v3.0,names,en,0.44,421.0607159999927,0.8,0.4,0.2,0.0,0.8
-gliclass-large-v3.0,desc,en,0.16,523.128652000014,0.0,0.2,0.0,0.0,0.6

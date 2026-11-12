@@ -34,17 +34,6 @@ FORMS = {
                "eine reine Tatsachenaussage"],
     },
 }
-TEMPLATE = {"en": "This sentence expresses {}.", "de": "Dieser Satz drückt Folgendes aus: {}."}
-
-
-def nli(model_id):
-    from transformers import pipeline
-    pipe = pipeline("zero-shot-classification", model=model_id, device=-1)
-
-    def predict(text, options, lang):
-        r = pipe(text, options, hypothesis_template=TEMPLATE[lang], multi_label=False)
-        return r["labels"][0]
-    return predict
 
 
 def gliclass(model_id):
@@ -74,11 +63,7 @@ def laya(_):
 # (name, loader, model id, languages it is meant for)
 MODELS = [
     ("laya (en + multilingual)", laya, None, ("en", "de")),
-    ("bge-m3-zeroshot-v2.0", nli, "MoritzLaurer/bge-m3-zeroshot-v2.0", ("en", "de")),
-    ("mDeBERTa-v3-base-xnli", nli, "MoritzLaurer/mDeBERTa-v3-base-xnli-multilingual-nli-2mil7", ("en", "de")),
-    ("deberta-v3-large-zeroshot-v2.0", nli, "MoritzLaurer/deberta-v3-large-zeroshot-v2.0", ("en",)),
     ("gliclass-x-base", gliclass, "knowledgator/gliclass-x-base", ("en", "de")),
-    ("gliclass-large-v3.0", gliclass, "knowledgator/gliclass-large-v3.0", ("en",)),
 ]
 
 

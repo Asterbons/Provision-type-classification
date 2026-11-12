@@ -68,7 +68,50 @@ On first run the models are downloaded from Hugging Face: about 470 MB for `trai
 
 ## Next steps
 
-1. Test the trained models on sentences from real standards (NISO STS).
-2. Build a test set: 500–1,000 random sentences labelled by hand; split training and test by standard, not by sentence.
-3. Label further in rounds of 200–300 sentences, starting with those the model is unsure about and with the rare types (permission, possibility).
-4. Try fine-tuning the encoder itself rather than only a linear layer on top of its embeddings.
+Plan agreed in discussion. The numbers are working estimates, not measurements.
+
+### Target setup
+
+A small classifier handles most sentences; a router sends the low-confidence 5–10% to an LLM hosted in Azure. The LLM is also used once, offline, to pre-label training data.
+
+### Data
+
+- Available: about 300 German and 300 English NISO STS documents used for local tests, out of 40–50 thousand standards in total.
+- Set aside about 50 documents for testing only. Training sentences come from the remaining documents, so that near-identical sentences from one standard never land in both sets.
+- The unit is the sentence, not the document. A script extracts all sentences together with language, standard and section type.
+
+### Labelling
+
+| Set | Size | How it is labelled |
+|---|---|---|
+| Test | 500–600 sentences from the held-out documents | By hand and blind, without seeing any predicted label. Never used for training. |
+| Training | 5,000–10,000 sentences | Rules (spaCy) and the Azure LLM label independently; matching labels are accepted. |
+
+Manual checks on the training set, about 1,000–1,500 sentences in total:
+
+- All sentences where rules and LLM disagree.
+- An audit of the agreed labels: 50–100 random sentences per type, checked carefully. Zero errors in 300 means an error rate below 1% at 95% confidence; around 15 errors in 300 means the labels cannot be trusted yet. This is the check for cases where rules and LLM are wrong in the same way.
+- Optional: a quick pass through the training set grouped by type and verbal form, where outliers stand out.
+
+Errors found in the audit are usually systematic (for example "darf nicht" or "kann entfallen"), so they are fixed in the rule or the prompt rather than sentence by sentence.
+
+The test set has to be clean because everything is measured against it. The training set tolerates a few percent of label noise; a systematic error in it shows up as a drop for one type on the test set.
+
+Limits: a rare construction may be missing from 600 random sentences, so rare types (permission, possibility) are topped up deliberately. 600 sentences give roughly ±3–4 percentage points on overall accuracy and much less certainty per rare type.
+
+### Models
+
+- Build the rule baseline on verbal forms first. It is the lower bound any model has to beat, a free rough labeller and an explanation of each decision.
+- Fine-tune a small multilingual encoder with a five-class head directly in `transformers`. The classes are fixed, so models that take labels at request time (Laya, GLiClass) add little; they stay as candidates, not the main path. The e5 result above used a frozen encoder with only a linear layer trained.
+- Do not train inside spaCy: its text classifier is either a bag of words (same as the TF-IDF model), a CNN on its own vectors, or a wrapper around the same encoder fine-tuning. Keep spaCy for sentence splitting and for grammar-based rules ("ist … zu prüfen", scope of negation). A directly trained model can be wrapped as a spaCy component later.
+- Colleagues' earlier spaCy training attempt: look at `meta.json` (`performance`) and `config.cfg` (`[components.textcat.model]`) in their model folder for results and architecture, and check whether labelled sentences from real standards are left over.
+
+### Evaluation
+
+Report per-type precision, recall and F1, and macro-F1 as the headline number, not overall accuracy. Permission and possibility are rare, so a model that never finds them can still reach high accuracy. Missed requirements and false requirements are different errors and likely cost differently.
+
+### Open questions
+
+- Unit of classification on real text: list items that inherit the modal verb from their lead-in sentence, sentences with more than one provision type, tables, formulas and figure captions. Decide before labelling.
+- How much the STS section type helps. It narrows the choice (scope, terms and notes are almost always statements) but does not determine the type inside normative sections.
+- Which STS version the documents use; needed for the sentence extraction script.
